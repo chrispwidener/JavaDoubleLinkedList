@@ -1,4 +1,4 @@
-package main.java.DLL;
+package DLL;
 
 public class DLL<E> {
     private Node<E> head;
