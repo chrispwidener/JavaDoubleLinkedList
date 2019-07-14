@@ -4,10 +4,16 @@
 package DLL;
 
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import org.junit.jupiter.api.Assertions.*;
 
 class DLLTest {
-    @Test void addHeadWorks() {
+    @Test
+    void addHeadWorks() {
+        main.java.DLL.DLL<Integer> dll = new main.java.DLL.DLL<Integer>();
+        dll.linkHead(1);
+
+        assertEqual(1, dll.unlinkHead());
+
         //Library classUnderTest = new Library();
         //assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
     }
