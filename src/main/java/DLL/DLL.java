@@ -39,19 +39,38 @@ public class DLL<E> {
     public E unlinkHead() {
         if (length == 0) {
             return null;
-        } else {
+        } else if (length == 1){
+            E result = head.item;
+            head = null;
+            tail = null;
             length--;
-            E result = this.head.item;
-
+            return result;
+        } else {
+            E result = head.item;
+            head = head.next;
+            head.prev = null;
+            length--;
+            return result;
         }
     }
 
     @Nullable
     public E unlinkTail() {
-        length = (length == 0) ? 0 : length--;
-        E result = this.tail.item;
-        this.tail = this.tail.prev;
-        return result;
+        if (length == 0) {
+            return null;
+        } else if (length ==1) {
+            E result = tail.item;
+            head = null;
+            tail = null;
+            length--;
+            return result;
+        } else {
+            E result = tail.item;
+            tail = tail.prev;
+            tail.next = null;
+            length--;
+            return result;
+        }
     }
 
     public int getLength() {
@@ -80,7 +99,7 @@ public class DLL<E> {
 
     @VisibleForTesting // Otherwise private
     static class Node<E> {
-        E item;
+        final E item;
         Node<E> prev;
         Node<E> next;
 
