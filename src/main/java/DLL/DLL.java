@@ -32,10 +32,13 @@ public class DLL<E> {
     }
 
     public E unlinkHead() {
-        length = (length == 0) ? 0 : length--;
-        E result = this.head.item;
-        this.head = this.head.next;
-        return result;
+        if (length == 0) {
+            return null;
+        } else {
+            length--;
+            E result = this.head.item;
+
+        }
     }
 
     public E unlinkTail() {
