@@ -3,18 +3,44 @@
  */
 package DLL;
 
+import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
-import org.junit.jupiter.api.Assertions.*;
 
 class DLLTest {
     @Test
-    void addHeadWorks() {
-        main.java.DLL.DLL<Integer> dll = new main.java.DLL.DLL<Integer>();
+    void WHEN_ListIsEmpty_AND_linkHeadVal_THEN_UnlinkHeadEqualsVal() {
+        DLL<Integer> dll = new DLL<Integer>();
         dll.linkHead(1);
 
-        assertEqual(1, dll.unlinkHead());
+        Assertions.assertEquals(1, dll.unlinkHead());
+    }
 
-        //Library classUnderTest = new Library();
-        //assertTrue(classUnderTest.someLibraryMethod(), "someLibraryMethod should return 'true'");
+    @Test
+    void WHEN_ListIsEmpty_AND_linkTailVal_THEN_UnlinkTailEqualsVal() {
+        DLL<Integer> dll = new DLL<Integer>();
+        dll.linkTail(5);
+        dll.linkTail(2);
+
+        Assertions.assertEquals(2, dll.unlinkTail());
+    }
+
+    @Test
+    void WHEN_ListIs1234_AND_unlinkHeadX4_THEN_EachIs1234() {
+        DLL<Integer> dll = get1234LL();
+
+        Assertions.assertEquals(1,dll.unlinkHead());
+        Assertions.assertEquals(2,dll.unlinkHead());
+        Assertions.assertEquals(3,dll.unlinkHead());
+        Assertions.assertEquals(4,dll.unlinkHead());
+    }
+
+    // Utility
+    private DLL<Integer> get1234LL () {
+        DLL<Integer> dll = new DLL();
+        dll.linkTail(1);
+        dll.linkTail(2);
+        dll.linkTail(3);
+        dll.linkTail(4);
+        return dll;
     }
 }

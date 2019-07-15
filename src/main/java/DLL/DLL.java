@@ -1,4 +1,4 @@
-package main.java.DLL;
+package DLL;
 
 public class DLL<E> {
     private Node<E> head;
@@ -7,12 +7,28 @@ public class DLL<E> {
 
     public void linkHead(E item) {
         length++;
-        this.head = new Node(null, item, this.head);
+        final Node<E> oldHead = head;
+        final Node<E> newHead = new Node(null, item, this.head);
+        head = newHead;
+
+        if (length == 1) {
+            tail = newHead;
+        } else {
+            oldHead.prev = newHead;
+        }
     }
 
     public void linkTail(E item) {
         length++;
-        this.tail = new Node (this.tail, item, null);
+        final Node<E> oldTail = tail;
+        final Node<E> newTail = new Node(oldTail, item, null);
+        this.tail = newTail;
+
+        if (length == 1) {
+            head = newTail;
+        } else {
+            oldTail.next = newTail;
+        }
     }
 
     public E unlinkHead() {
