@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="7cde6dc2-86c8-48c6-bac9-ebf33dba762d" name="Default Changelist" comment="" />
+    <list default="true" id="7cde6dc2-86c8-48c6-bac9-ebf33dba762d" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/DLL/DLL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DLL/SafeLinkedList.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DLL/DLLTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DLL/SafeLinkedListTest.java" afterDir="false" />
+    </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
     <ignored path="$PROJECT_DIR$/build/" />
@@ -32,16 +36,16 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/main/java/DLL/DLL.java">
+        <entry file="file://$PROJECT_DIR$/src/main/java/DLL/SafeLinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="44">
-              <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+            <state relative-caret-position="220">
+              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/test/java/DLL/DLLTest.java">
+        <entry file="file://$PROJECT_DIR$/src/test/java/DLL/SafeLinkedListTest.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-132">
               <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
@@ -67,6 +71,7 @@
         <option value="$PROJECT_DIR$/src/DLL.java" />
         <option value="$PROJECT_DIR$/src/test/java/DLL/LibraryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/DLL/DLL.java" />
+        <option value="$PROJECT_DIR$/src/main/java/DLL/SafeLinkedList.java" />
       </list>
     </option>
   </component>
@@ -163,8 +168,8 @@
       </list>
     </option>
   </component>
-  <component name="RunManager" selected="JUnit.DLLTest">
-    <configuration name="DLLTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.SafeLinkedListTest">
+    <configuration name="SafeLinkedListTest" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="main.java.DLL.DLL.test" />
       <extension name="coverage">
         <pattern>
@@ -173,13 +178,13 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="DLL" />
-      <option name="MAIN_CLASS_NAME" value="DLL.DLLTest" />
+      <option name="MAIN_CLASS_NAME" value="DLL.SafeLinkedListTest" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DLLTest.GIVEN_dll_has_one_val_WHEN_val_is_unlinked_THEN_head_and_tail_are_both_null" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SafeLinkedListTest.GIVEN_dll_has_one_val_WHEN_val_is_unlinked_THEN_head_and_tail_are_both_null" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="main.java.DLL.DLL.test" />
       <extension name="coverage">
         <pattern>
@@ -188,14 +193,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="DLL" />
-      <option name="MAIN_CLASS_NAME" value="DLL.DLLTest" />
+      <option name="MAIN_CLASS_NAME" value="DLL.SafeLinkedListTest" />
       <option name="METHOD_NAME" value="GIVEN_dll_has_one_val_WHEN_val_is_unlinked_THEN_head_and_tail_are_both_null" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DLLTest.GIVEN_dll_is_empty_WHEN_unlinked_THEN_size_should_be_zero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SafeLinkedListTest.GIVEN_dll_is_empty_WHEN_unlinked_THEN_size_should_be_zero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="main.java.DLL.DLL.test" />
       <extension name="coverage">
         <pattern>
@@ -204,14 +209,14 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="DLL" />
-      <option name="MAIN_CLASS_NAME" value="DLL.DLLTest" />
+      <option name="MAIN_CLASS_NAME" value="DLL.SafeLinkedListTest" />
       <option name="METHOD_NAME" value="GIVEN_dll_is_empty_WHEN_unlinked_THEN_size_should_be_zero" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="DLLTest.GIVEN_dll_is_empty_WHEN_val_is_unlinked_THEN_unlink_should_return_null" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SafeLinkedListTest.GIVEN_dll_is_empty_WHEN_val_is_unlinked_THEN_unlink_should_return_null" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="main.java.DLL.DLL.test" />
       <extension name="coverage">
         <pattern>
@@ -220,7 +225,7 @@
         </pattern>
       </extension>
       <option name="PACKAGE_NAME" value="DLL" />
-      <option name="MAIN_CLASS_NAME" value="DLL.DLLTest" />
+      <option name="MAIN_CLASS_NAME" value="DLL.SafeLinkedListTest" />
       <option name="METHOD_NAME" value="GIVEN_dll_is_empty_WHEN_val_is_unlinked_THEN_unlink_should_return_null" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
@@ -229,10 +234,10 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.DLLTest" />
-        <item itemvalue="JUnit.DLLTest.GIVEN_dll_has_one_val_WHEN_val_is_unlinked_THEN_head_and_tail_are_both_null" />
-        <item itemvalue="JUnit.DLLTest.GIVEN_dll_is_empty_WHEN_unlinked_THEN_size_should_be_zero" />
-        <item itemvalue="JUnit.DLLTest.GIVEN_dll_is_empty_WHEN_val_is_unlinked_THEN_unlink_should_return_null" />
+        <item itemvalue="JUnit.SafeLinkedListTest" />
+        <item itemvalue="JUnit.SafeLinkedListTest.GIVEN_dll_has_one_val_WHEN_val_is_unlinked_THEN_head_and_tail_are_both_null" />
+        <item itemvalue="JUnit.SafeLinkedListTest.GIVEN_dll_is_empty_WHEN_unlinked_THEN_size_should_be_zero" />
+        <item itemvalue="JUnit.SafeLinkedListTest.GIVEN_dll_is_empty_WHEN_val_is_unlinked_THEN_unlink_should_return_null" />
       </list>
     </recent_temporary>
   </component>
@@ -299,7 +304,7 @@
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" />
-      <window_info active="true" anchor="bottom" id="Terminal" order="7" visible="true" weight="0.3286119" />
+      <window_info anchor="bottom" id="Terminal" order="7" weight="0.3286119" />
       <window_info anchor="bottom" id="Event Log" order="8" side_tool="true" />
       <window_info anchor="bottom" id="Version Control" order="9" />
       <window_info anchor="bottom" id="Messages" order="10" weight="0.3286119" />
@@ -365,17 +370,17 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/DLL/DLLTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/DLL/SafeLinkedListTest.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-132">
           <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DLL/DLL.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/DLL/SafeLinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="44">
-          <caret line="14" column="24" selection-start-line="14" selection-start-column="24" selection-end-line="14" selection-end-column="24" />
+        <state relative-caret-position="220">
+          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
         </state>
       </provider>
     </entry>
