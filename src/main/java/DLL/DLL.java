@@ -1,8 +1,12 @@
 package DLL;
 
+import com.google.common.annotations.VisibleForTesting;
+
+import javax.annotation.Nullable;
+
 public class DLL<E> {
-    private Node<E> head;
-    private Node<E> tail;
+    @Nullable private Node<E> head;
+    @Nullable private Node<E> tail;
     private int length = 0;
 
     public void linkHead(E item) {
@@ -31,6 +35,7 @@ public class DLL<E> {
         }
     }
 
+    @Nullable
     public E unlinkHead() {
         if (length == 0) {
             return null;
@@ -41,6 +46,7 @@ public class DLL<E> {
         }
     }
 
+    @Nullable
     public E unlinkTail() {
         length = (length == 0) ? 0 : length--;
         E result = this.tail.item;
@@ -48,7 +54,32 @@ public class DLL<E> {
         return result;
     }
 
-    private static class Node<E> {
+    public int getLength() {
+        return length;
+    }
+
+    @VisibleForTesting // Otherwise none
+    @Nullable
+    Node<E> peakHead() {
+        if (head == null) {
+            return null;
+        } else {
+            return head;
+        }
+    }
+
+    @VisibleForTesting // Otherwise none
+    @Nullable
+    Node<E> peakTail() {
+        if (tail == null) {
+            return null;
+        } else {
+            return tail;
+        }
+    }
+
+    @VisibleForTesting // Otherwise private
+    static class Node<E> {
         E item;
         Node<E> prev;
         Node<E> next;
