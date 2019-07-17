@@ -7,14 +7,14 @@ import org.checkerframework.checker.nullness.qual.NonNull;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
+import javax.annotation.Nonnull;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
-
-import javax.annotation.Nonnull;
+import java.util.Optional;
 
 import static org.junit.jupiter.api.Assertions.assertEquals;
-import static org.junit.jupiter.api.Assertions.assertNull;
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 // NPEs here would be considered failures, so no need to guard against them
 @SuppressWarnings("ConstantConditions")
@@ -31,7 +31,7 @@ class SafeLinkedListTest {
     void WHEN_ListIsEmpty_AND_linkHeadVal_THEN_UnlinkHeadEqualsVal() {
         safeLinkedList.linkHead(1);
 
-        assertEquals(1, safeLinkedList.unlinkHead());
+        assertEquals(1, safeLinkedList.unlinkHead().get());
     }
 
     @Test
@@ -39,38 +39,38 @@ class SafeLinkedListTest {
         safeLinkedList.linkTail(5);
         safeLinkedList.linkTail(2);
 
-        assertEquals(2, safeLinkedList.unlinkTail());
+        assertEquals(2, safeLinkedList.unlinkTail().get());
     }
 
     @Test
     void GIVEN_list_is_empty_WHEN_val_is_added_THEN_head_and_tail_are_both_val() {
         safeLinkedList.linkHead(1);
 
-        assertEquals(1, safeLinkedList.peakHead().item);
-        assertEquals(1, safeLinkedList.peakTail().item);
+        assertEquals(1, safeLinkedList.peekFirst().get().item);
+        assertEquals(1, safeLinkedList.peekLast().get().item);
 
         safeLinkedList = new SafeLinkedList<Integer>();
 
         safeLinkedList.linkTail(2);
 
-        assertEquals(2, safeLinkedList.peakHead().item);
-        assertEquals(2, safeLinkedList.peakTail().item);
+        assertEquals(2, safeLinkedList.peekFirst().get().item);
+        assertEquals(2, safeLinkedList.peekLast().get().item);
     }
 
     @Test
     void WHEN_ListIs1234_AND_unlinkHeadX4_THEN_EachIs1234() {
         safeLinkedList = get1234LL();
 
-        assertEquals(1, safeLinkedList.unlinkHead());
-        assertEquals(2, safeLinkedList.unlinkHead());
-        assertEquals(3, safeLinkedList.unlinkHead());
-        assertEquals(4, safeLinkedList.unlinkHead());
+        assertEquals(1, safeLinkedList.unlinkHead().get());
+        assertEquals(2, safeLinkedList.unlinkHead().get());
+        assertEquals(3, safeLinkedList.unlinkHead().get());
+        assertEquals(4, safeLinkedList.unlinkHead().get());
     }
 
     @Test
-    void GIVEN_dll_is_empty_WHEN_val_is_unlinked_THEN_unlink_should_return_null() {
-        assertNull(safeLinkedList.unlinkHead());
-        assertNull(safeLinkedList.unlinkTail());
+    void GIVEN_dll_is_empty_WHEN_val_is_unlinked_THEN_unlink_should_return_empty() {
+        assertTrue(safeLinkedList.unlinkHead().isEmpty());
+        assertTrue(safeLinkedList.unlinkTail().isEmpty());
     }
 
     @Test
@@ -91,51 +91,52 @@ class SafeLinkedListTest {
 
         safeLinkedList.unlinkHead();
 
-        assertNull(safeLinkedList.peakHead());
-        assertNull(safeLinkedList.peakTail());
+        assertEquals(Optional.empty(), safeLinkedList.peekFirst());
+        assertEquals(Optional.empty(), safeLinkedList.peekLast());
 
         safeLinkedList = new SafeLinkedList<Integer>();
         safeLinkedList.linkHead(2);
 
         safeLinkedList.unlinkTail();
 
-        assertNull(safeLinkedList.peakHead());
-        assertNull(safeLinkedList.peakTail());
+        assertEquals(Optional.empty(), safeLinkedList.peekFirst());
+        assertEquals(Optional.empty(), safeLinkedList.peekLast());
     }
 
     @Test
     void WHEN_a_value_is_unlinked_THEN_it_should_not_be_leaked() {
         safeLinkedList = get1234LL();
-        assertEquals(Arrays.asList(1, 2, 3, 4), getValuesForward(safeLinkedList));
+        assertEquals(Arrays.asList(1, 2, 3, 4), toArrayList(safeLinkedList));
 
         safeLinkedList.unlinkTail();
 
-        assertEquals(Arrays.asList(1, 2, 3), getValuesForward(safeLinkedList));
+        assertEquals(Arrays.asList(1, 2, 3), toArrayList(safeLinkedList));
 
         safeLinkedList = get1234LL();
-        assertEquals(Arrays.asList(1, 2, 3, 4), getValuesBackward(safeLinkedList));
+
+        assertEquals(Arrays.asList(4, 3, 2, 1), toArrayListReversed(safeLinkedList));
 
         safeLinkedList.unlinkHead();
 
-        assertEquals(Arrays.asList(2, 3, 4), getValuesBackward(safeLinkedList));
+        assertEquals(Arrays.asList(4, 3, 2), toArrayListReversed(safeLinkedList));
     }
 
     @Test
     void WHEN_dll_is_populated_and_values_are_unlinked_THEN_head_and_tail_should_be_correct() {
         safeLinkedList = get1234LL();
 
-        assertEquals(1, safeLinkedList.peakHead().item);
-        assertEquals(4, safeLinkedList.peakTail().item);
+        assertEquals(1, safeLinkedList.peekFirst().get().item);
+        assertEquals(4, safeLinkedList.peekLast().get().item);
 
         safeLinkedList.unlinkHead();
 
-        assertEquals(2, safeLinkedList.peakHead().item);
-        assertEquals(4, safeLinkedList.peakTail().item);
+        assertEquals(2, safeLinkedList.peekFirst().get().item);
+        assertEquals(4, safeLinkedList.peekLast().get().item);
 
         safeLinkedList.unlinkTail();
 
-        assertEquals(2, safeLinkedList.peakHead().item);
-        assertEquals(3, safeLinkedList.peakTail().item);
+        assertEquals(2, safeLinkedList.peekFirst().get().item);
+        assertEquals(3, safeLinkedList.peekLast().get().item);
     }
 
     // Utility
@@ -149,25 +150,25 @@ class SafeLinkedListTest {
     }
 
     @NonNull
-    private List<Integer> getValuesForward(@NonNull SafeLinkedList<Integer> safeLinkedList) {
-        SafeLinkedList.Node<Integer> head = safeLinkedList.peakHead();
+    private List<Integer> toArrayList(@NonNull SafeLinkedList<Integer> safeLinkedList) {
+        Optional<SafeLinkedList.Node<Integer>> first = safeLinkedList.peekFirst();
         List<Integer> list = new ArrayList<>();
 
-        while (head != null) {
-            list.add(head.item);
-            head = head.next;
+        while (first.isPresent()) {
+            list.add(first.get().item);
+            first = first.get().next;
         }
         return list;
     }
 
     @Nonnull
-    private List<Integer> getValuesBackward(@NonNull SafeLinkedList<Integer> safeLinkedList) {
-        SafeLinkedList.Node<Integer> tail = safeLinkedList.peakTail();
+    private List<Integer> toArrayListReversed(@NonNull SafeLinkedList<Integer> safeLinkedList) {
+        Optional<SafeLinkedList.Node<Integer>> last = safeLinkedList.peekLast();
         List<Integer> list = new ArrayList<>();
 
-        while (tail != null) {
-            list.add(tail.item);
-            tail = tail.prev;
+        while (last.isPresent()) {
+            list.add(last.get().item);
+            last = last.get().prev;
         }
         return list;
     }

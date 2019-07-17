@@ -3,8 +3,10 @@
   <component name="ChangeListManager">
     <list default="true" id="7cde6dc2-86c8-48c6-bac9-ebf33dba762d" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/DLL/DLL.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/DLL/SafeLinkedList.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/DLL/DLLTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DLL/SafeLinkedListTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/DLL/DLL$Node.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/DLL/DLL.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/test/classes/DLL/DLLTest.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/DLL/SafeLinkedListTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/DLL/SafeLinkedListTest.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -35,20 +37,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/DLL/SafeLinkedList.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="220">
-              <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+            <state relative-caret-position="1694">
+              <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
             </state>
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/test/java/DLL/SafeLinkedListTest.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="-132">
-              <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
+            <state relative-caret-position="242">
+              <caret line="120" column="41" selection-start-line="120" selection-start-column="41" selection-end-line="120" selection-end-column="41" />
+              <folding>
+                <element signature="e#461#500#1" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -72,6 +77,7 @@
         <option value="$PROJECT_DIR$/src/test/java/DLL/LibraryTest.java" />
         <option value="$PROJECT_DIR$/src/main/java/DLL/DLL.java" />
         <option value="$PROJECT_DIR$/src/main/java/DLL/SafeLinkedList.java" />
+        <option value="$PROJECT_DIR$/src/test/java/DLL/SafeLinkedListTest.java" />
       </list>
     </option>
   </component>
@@ -87,6 +93,8 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
+      <pane id="Scope" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -145,8 +153,6 @@
           <select />
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -200,7 +206,7 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SafeLinkedListTest.GIVEN_dll_is_empty_WHEN_unlinked_THEN_size_should_be_zero" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SafeLinkedListTest.WHEN_ListIsEmpty_AND_linkHeadVal_THEN_UnlinkHeadEqualsVal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="main.java.DLL.DLL.test" />
       <extension name="coverage">
         <pattern>
@@ -210,13 +216,13 @@
       </extension>
       <option name="PACKAGE_NAME" value="DLL" />
       <option name="MAIN_CLASS_NAME" value="DLL.SafeLinkedListTest" />
-      <option name="METHOD_NAME" value="GIVEN_dll_is_empty_WHEN_unlinked_THEN_size_should_be_zero" />
+      <option name="METHOD_NAME" value="WHEN_ListIsEmpty_AND_linkHeadVal_THEN_UnlinkHeadEqualsVal" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="SafeLinkedListTest.GIVEN_dll_is_empty_WHEN_val_is_unlinked_THEN_unlink_should_return_null" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="SafeLinkedListTest.WHEN_ListIsEmpty_AND_linkTailVal_THEN_UnlinkTailEqualsVal" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="main.java.DLL.DLL.test" />
       <extension name="coverage">
         <pattern>
@@ -226,7 +232,23 @@
       </extension>
       <option name="PACKAGE_NAME" value="DLL" />
       <option name="MAIN_CLASS_NAME" value="DLL.SafeLinkedListTest" />
-      <option name="METHOD_NAME" value="GIVEN_dll_is_empty_WHEN_val_is_unlinked_THEN_unlink_should_return_null" />
+      <option name="METHOD_NAME" value="WHEN_ListIsEmpty_AND_linkTailVal_THEN_UnlinkTailEqualsVal" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="SafeLinkedListTest.WHEN_a_value_is_unlinked_THEN_it_should_not_be_leaked" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="main.java.DLL.DLL.test" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="DLL.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="DLL" />
+      <option name="MAIN_CLASS_NAME" value="DLL.SafeLinkedListTest" />
+      <option name="METHOD_NAME" value="WHEN_a_value_is_unlinked_THEN_it_should_not_be_leaked" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -235,9 +257,10 @@
     <recent_temporary>
       <list>
         <item itemvalue="JUnit.SafeLinkedListTest" />
+        <item itemvalue="JUnit.SafeLinkedListTest.WHEN_a_value_is_unlinked_THEN_it_should_not_be_leaked" />
         <item itemvalue="JUnit.SafeLinkedListTest.GIVEN_dll_has_one_val_WHEN_val_is_unlinked_THEN_head_and_tail_are_both_null" />
-        <item itemvalue="JUnit.SafeLinkedListTest.GIVEN_dll_is_empty_WHEN_unlinked_THEN_size_should_be_zero" />
-        <item itemvalue="JUnit.SafeLinkedListTest.GIVEN_dll_is_empty_WHEN_val_is_unlinked_THEN_unlink_should_return_null" />
+        <item itemvalue="JUnit.SafeLinkedListTest.WHEN_ListIsEmpty_AND_linkTailVal_THEN_UnlinkTailEqualsVal" />
+        <item itemvalue="JUnit.SafeLinkedListTest.WHEN_ListIsEmpty_AND_linkHeadVal_THEN_UnlinkHeadEqualsVal" />
       </list>
     </recent_temporary>
   </component>
@@ -255,42 +278,42 @@
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="DLLTest - 2019.07.14 at 21h 36m 37s.xml">
-      <configuration name="DLLTest" configurationId="JUnit" />
+    <history-entry file="SafeLinkedListTest - 2019.07.16 at 22h 41m 52s.xml">
+      <configuration name="SafeLinkedListTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DLLTest - 2019.07.14 at 21h 41m 55s.xml">
-      <configuration name="DLLTest" configurationId="JUnit" />
+    <history-entry file="SafeLinkedListTest - 2019.07.16 at 22h 42m 17s.xml">
+      <configuration name="SafeLinkedListTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DLLTest - 2019.07.14 at 21h 42m 43s.xml">
-      <configuration name="DLLTest" configurationId="JUnit" />
+    <history-entry file="SafeLinkedListTest_WHEN_ListIsEmpty_AND_linkHeadVal_THEN_UnlinkHeadEqualsVal - 2019.07.16 at 22h 42m 42s.xml">
+      <configuration name="SafeLinkedListTest.WHEN_ListIsEmpty_AND_linkHeadVal_THEN_UnlinkHeadEqualsVal" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DLLTest - 2019.07.14 at 21h 46m 15s.xml">
-      <configuration name="DLLTest" configurationId="JUnit" />
+    <history-entry file="SafeLinkedListTest_WHEN_ListIsEmpty_AND_linkHeadVal_THEN_UnlinkHeadEqualsVal - 2019.07.16 at 22h 43m 16s.xml">
+      <configuration name="SafeLinkedListTest.WHEN_ListIsEmpty_AND_linkHeadVal_THEN_UnlinkHeadEqualsVal" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DLLTest - 2019.07.14 at 23h 39m 56s.xml">
-      <configuration name="DLLTest" configurationId="JUnit" />
+    <history-entry file="SafeLinkedListTest_WHEN_ListIsEmpty_AND_linkTailVal_THEN_UnlinkTailEqualsVal - 2019.07.16 at 22h 43m 31s.xml">
+      <configuration name="SafeLinkedListTest.WHEN_ListIsEmpty_AND_linkTailVal_THEN_UnlinkTailEqualsVal" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DLLTest_GIVEN_dll_is_empty_WHEN_val_is_unlinked_THEN_unlink_should_return_null - 2019.07.14 at 23h 56m 15s.xml">
-      <configuration name="DLLTest.GIVEN_dll_is_empty_WHEN_val_is_unlinked_THEN_unlink_should_return_null" configurationId="JUnit" />
+    <history-entry file="SafeLinkedListTest_WHEN_ListIsEmpty_AND_linkTailVal_THEN_UnlinkTailEqualsVal - 2019.07.16 at 22h 45m 10s.xml">
+      <configuration name="SafeLinkedListTest.WHEN_ListIsEmpty_AND_linkTailVal_THEN_UnlinkTailEqualsVal" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DLLTest_GIVEN_dll_is_empty_WHEN_val_is_unlinked_THEN_unlink_should_return_null - 2019.07.14 at 23h 59m 25s.xml">
-      <configuration name="DLLTest.GIVEN_dll_is_empty_WHEN_val_is_unlinked_THEN_unlink_should_return_null" configurationId="JUnit" />
+    <history-entry file="SafeLinkedListTest - 2019.07.16 at 22h 45m 17s.xml">
+      <configuration name="SafeLinkedListTest" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DLLTest_GIVEN_dll_is_empty_WHEN_unlinked_THEN_size_should_be_zero - 2019.07.14 at 23h 59m 44s.xml">
-      <configuration name="DLLTest.GIVEN_dll_is_empty_WHEN_unlinked_THEN_size_should_be_zero" configurationId="JUnit" />
+    <history-entry file="SafeLinkedListTest_GIVEN_dll_has_one_val_WHEN_val_is_unlinked_THEN_head_and_tail_are_both_null - 2019.07.16 at 22h 45m 31s.xml">
+      <configuration name="SafeLinkedListTest.GIVEN_dll_has_one_val_WHEN_val_is_unlinked_THEN_head_and_tail_are_both_null" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DLLTest_GIVEN_dll_has_one_val_WHEN_val_is_unlinked_THEN_head_and_tail_are_both_null - 2019.07.14 at 23h 59m 55s.xml">
-      <configuration name="DLLTest.GIVEN_dll_has_one_val_WHEN_val_is_unlinked_THEN_head_and_tail_are_both_null" configurationId="JUnit" />
+    <history-entry file="SafeLinkedListTest_GIVEN_dll_has_one_val_WHEN_val_is_unlinked_THEN_head_and_tail_are_both_null - 2019.07.16 at 22h 46m 22s.xml">
+      <configuration name="SafeLinkedListTest.GIVEN_dll_has_one_val_WHEN_val_is_unlinked_THEN_head_and_tail_are_both_null" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="DLLTest - 2019.07.15 at 00h 00m 04s.xml">
-      <configuration name="DLLTest" configurationId="JUnit" />
+    <history-entry file="SafeLinkedListTest_WHEN_a_value_is_unlinked_THEN_it_should_not_be_leaked - 2019.07.16 at 22h 46m 36s.xml">
+      <configuration name="SafeLinkedListTest.WHEN_a_value_is_unlinked_THEN_it_should_not_be_leaked" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="ToolWindowManager">
     <frame x="-7" y="-7" width="1550" height="838" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.25637585" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.18926175" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Image Layers" order="2" />
       <window_info id="Designer" order="3" />
@@ -299,7 +322,7 @@
       <window_info id="Favorites" order="6" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" weight="0.3286119" />
-      <window_info anchor="bottom" id="Run" order="2" weight="0.5467422" />
+      <window_info active="true" anchor="bottom" id="Run" order="2" visible="true" weight="0.34985834" />
       <window_info anchor="bottom" id="Debug" order="3" weight="0.4" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -363,24 +386,21 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/DLL/LibraryTest.java">
+    <entry file="file://$PROJECT_DIR$/src/test/java/DLL/LibraryTest.java" />
+    <entry file="file://$PROJECT_DIR$/src/main/java/DLL/SafeLinkedList.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="646">
-          <caret line="34" selection-start-line="34" selection-end-line="34" />
+        <state relative-caret-position="1694">
+          <caret line="77" column="41" selection-start-line="77" selection-start-column="41" selection-end-line="77" selection-end-column="41" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/DLL/SafeLinkedListTest.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-132">
-          <caret line="103" column="4" selection-start-line="103" selection-start-column="4" selection-end-line="103" selection-end-column="4" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/DLL/SafeLinkedList.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="220">
-          <caret line="21" column="23" selection-start-line="21" selection-start-column="23" selection-end-line="21" selection-end-column="23" />
+        <state relative-caret-position="242">
+          <caret line="120" column="41" selection-start-line="120" selection-start-column="41" selection-end-line="120" selection-end-column="41" />
+          <folding>
+            <element signature="e#461#500#1" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
